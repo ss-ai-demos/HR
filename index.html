@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Generic starter index page" />
+    <title>My Website</title>
+
+    <!-- Basic styles (keep inline for a single-file starter) -->
+    <style>
+        :root{
+            --bg:#f7f8fb; --card:#fff; --accent:#0066ff; --muted:#6b7280;
+            --radius:10px; font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{margin:0;background:var(--bg);color:#111;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+        .container{max-width:1100px;margin:0 auto;padding:24px}
+        header{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,0.9) 100%);border-bottom:1px solid #e6e9ef}
+        .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+        .brand{display:flex;align-items:center;gap:12px;font-weight:600}
+        .brand .logo{width:40px;height:40px;background:var(--accent);border-radius:8px;display:inline-block}
+        nav ul{list-style:none;display:flex;gap:12px;margin:0;padding:0}
+        nav a{text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:8px}
+        nav a:hover{background:rgba(0,0,0,0.04);color:#000}
+        .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:48px 0}
+        .hero h1{margin:0;font-size:clamp(1.6rem,3vw,2.4rem)}
+        .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+        .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+        footer{padding:28px 0;font-size:0.9rem;color:var(--muted);text-align:center;margin-top:36px}
+        .cta{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
+        /* small screens */
+        @media(min-width:800px){
+            .hero{grid-template-columns:1fr 420px;padding:64px 0}
+        }
+        .muted{color:var(--muted)}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <span class="logo" aria-hidden="true"></span>
+                <span>My Website</span>
+            </div>
+
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id="home">
+        <section class="hero">
+            <div>
+                <h1>Simple, Flexible Starter Page</h1>
+                <p class="muted">A minimal, accessible starting point for web projects. Customize layout, components, and styles to fit your needs.</p>
+
+                <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a class="cta" href="#features">Get Started</a>
+                    <a href="#about" style="align-self:center;color:var(--muted)">Learn more</a>
+                </div>
+
+                <div id="features" class="features" style="margin-top:20px">
+                    <article class="card">
+                        <h3 style="margin:0 0 8px 0">Responsive</h3>
+                        <p class="muted" style="margin:0">Works across devices with a fluid layout and simple CSS variables for theming.</p>
+                    </article>
+                    <article class="card">
+                        <h3 style="margin:0 0 8px 0">Accessible</h3>
+                        <p class="muted" style="margin:0">Semantic HTML and clear focus states for keyboard users and screen readers.</p>
+                    </article>
+                    <article class="card">
+                        <h3 style="margin:0 0 8px 0">Customizable</h3>
+                        <p class="muted" style="margin:0">Lightweight structure you can expand with frameworks or plain JS as needed.</p>
+                    </article>
+                </div>
+            </div>
+
+            <aside class="card" aria-labelledby="about">
+                <h2 id="about" style="margin-top:0">About this template</h2>
+                <p class="muted">Use this file as index.html for a new project. It contains a header, hero, feature cards, and a contact form. Replace text, colors, and components to match your brand.</p>
+                <dl style="margin-top:12px;color:var(--muted);font-size:0.95rem">
+                    <dt><strong>Author</strong></dt>
+                    <dd>Starter</dd>
+                    <dt><strong>License</strong></dt>
+                    <dd>MIT (modify as needed)</dd>
+                </dl>
+            </aside>
+        </section>
+
+        <section id="contact" style="margin-top:26px">
+            <div class="card">
+                <h3 style="margin-top:0">Contact</h3>
+                <form id="contactForm" novalidate>
+                    <label style="display:block;margin-bottom:8px">
+                        <span class="muted" style="display:block;margin-bottom:6px">Name</span>
+                        <input name="name" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef">
+                    </label>
+
+                    <label style="display:block;margin-bottom:8px">
+                        <span class="muted" style="display:block;margin-bottom:6px">Email</span>
+                        <input name="email" type="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef">
+                    </label>
+
+                    <label style="display:block;margin-bottom:12px">
+                        <span class="muted" style="display:block;margin-bottom:6px">Message</span>
+                        <textarea name="message" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef"></textarea>
+                    </label>
+
+                    <div style="display:flex;gap:8px;align-items:center">
+                        <button type="submit" class="cta">Send</button>
+                        <span class="muted" id="formStatus" aria-live="polite"></span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>&copy; <span id="year"></span> My Website — Built with a simple starter template.</small>
+        </div>
+    </footer>
+
+    <script>
+        // Small behaviors: current year, basic form validation, smooth scrolling
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll for in-page links
+        document.querySelectorAll('a[href^="#"]').forEach(a=>{
+            a.addEventListener('click', e=>{
+                const target = document.querySelector(a.getAttribute('href'));
+                if(target){
+                    e.preventDefault();
+                    target.scrollIntoView({behavior:'smooth',block:'start'});
+                }
+            });
+        });
+
+        // Basic client-side form handling stub
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        form.addEventListener('submit', e=>{
+            e.preventDefault();
+            const data = new FormData(form);
+            if(!data.get('name') || !data.get('email')) {
+                status.textContent = 'Please fill the required fields.';
+                status.style.color = 'crimson';
+                return;
+            }
+            status.style.color = 'inherit';
+            status.textContent = 'Sending...';
+
+            // Replace this with real submission (fetch to API) as needed.
+            setTimeout(()=>{ status.textContent = 'Message sent (demo).'; form.reset(); }, 800);
+        });
+    </script>
+</body>
+</html>
