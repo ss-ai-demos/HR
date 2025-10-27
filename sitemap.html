@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal - Site Map</title>
+    <style>
+        :root {
+            --bg: #f7f8fb;
+            --card: #fff;
+            --accent: #0066ff;
+            --muted: #6b7280;
+            --radius: 10px;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: #111;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.9) 100%);
+            border-bottom: 1px solid #e6e9ef;
+            margin-bottom: 32px;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 0;
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+        
+        .brand .logo {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        h1 {
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+        
+        .sitemap-section {
+            background: var(--card);
+            padding: 24px;
+            border-radius: var(--radius);
+            box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+            margin-bottom: 24px;
+        }
+        
+        .sitemap-section h2 {
+            color: #111;
+            margin-top: 0;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+        }
+        
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sitemap-list li {
+            margin-bottom: 8px;
+        }
+        
+        .sitemap-list a {
+            color: var(--accent);
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
+        
+        .sitemap-list a:hover {
+            background-color: rgba(0, 102, 255, 0.1);
+        }
+        
+        .description {
+            color: var(--muted);
+            font-size: 0.9em;
+            margin-left: 12px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        
+        footer {
+            padding: 28px 0;
+            font-size: 0.9rem;
+            color: var(--muted);
+            text-align: center;
+            margin-top: 36px;
+            border-top: 1px solid #e6e9ef;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <span class="logo" aria-hidden="true"></span>
+                <span>HR Portal</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Site Map</h1>
+        <p>Navigate through all available pages and resources in the HR Portal.</p>
+
+        <div class="grid">
+            <div class="sitemap-section">
+                <h2>Main Pages</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="index.html">Home Page</a>
+                        <span class="description">Main landing page</span>
+                    </li>
+                    <li>
+                        <a href="hr-policies.html">HR Policies</a>
+                        <span class="description">Company policies and guidelines</span>
+                    </li>
+                    <li>
+                        <a href="leave-process.html">Leave Process</a>
+                        <span class="description">Step-by-step leave application guide</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>Documents</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="HR%20Policies.pdf">HR Policies PDF</a>
+                        <span class="description">Complete policy document</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>Employee Data</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="Employees%20By%20Streams.csv">Employees by Streams</a>
+                        <span class="description">Employee organizational data</span>
+                    </li>
+                    <li>
+                        <a href="HR_Leave_Records.csv">Leave Records</a>
+                        <span class="description">Employee leave history</span>
+                    </li>
+                    <li>
+                        <a href="Personal%20Records.csv">Personal Records</a>
+                        <span class="description">Employee personal information</span>
+                    </li>
+                    <li>
+                        <a href="Skills%20Matrix.csv">Skills Matrix</a>
+                        <span class="description">Employee skills and competencies</span>
+                    </li>
+                    <li>
+                        <a href="Work%20Streams.csv">Work Streams</a>
+                        <span class="description">Project and work allocation data</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>CVs & Resumes</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="CVs/Arjun_Raghavan_CV.pdf">Arjun Raghavan CV</a>
+                    </li>
+                    <li>
+                        <a href="CVs/Meera%20Deshpande.pdf">Meera Deshpande CV</a>
+                    </li>
+                    <li>
+                        <a href="CVs/Rajesh%20Iyer.pdf">Rajesh Iyer CV</a>
+                    </li>
+                    <li>
+                        <a href="CVs/Rohan%20Malhotra.pdf">Rohan Malhotra CV</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>Job Profiles</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="Profiles/Delivery%20Manager/DM.docx">Delivery Manager Profile</a>
+                        <span class="description">Role description and requirements</span>
+                    </li>
+                    <li>
+                        <a href="Profiles/Full%20Stack%20Developer/FSD.docx">Full Stack Developer Profile</a>
+                        <span class="description">Role description and requirements</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>Assets</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="target001.png">Target Image 1</a>
+                        <span class="description">Organizational chart or target</span>
+                    </li>
+                    <li>
+                        <a href="target002.png">Target Image 2</a>
+                        <span class="description">Organizational chart or target</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 HR Portal. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
